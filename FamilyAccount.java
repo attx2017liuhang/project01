@@ -1,49 +1,51 @@
 public class FamilyAccount {
 	public static void main(String[] args) {
-        String details = "ÊÕÖ§\tÕË»§½ð¶î\tÊÕÖ§½ð¶î\tËµ    Ã÷\n";
+        String details = "ï¿½ï¿½Ö§\tï¿½Ë»ï¿½ï¿½ï¿½ï¿½\tï¿½ï¿½Ö§ï¿½ï¿½ï¿½\tËµ    ï¿½ï¿½\n";
         int balance = 10000;
+
+        System.out.println("hotfix");
 
         boolean loopFlag = true;
         do {
-		    System.out.println("\n-----------------¼ÒÍ¥ÊÕÖ§¼ÇÕËÈí¼þ-----------------\n");
-            System.out.println("                   1 ÊÕÖ§Ã÷Ï¸");
-            System.out.println("                   2 µÇ¼ÇÊÕÈë");
-            System.out.println("                   3 µÇ¼ÇÖ§³ö");
-            System.out.println("                   4 ÍË    ³ö\n");
-            System.out.print("                   ÇëÑ¡Ôñ(1-4)£º");
+		    System.out.println("\n-----------------ï¿½ï¿½Í¥ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-----------------\n");
+            System.out.println("                   1 ï¿½ï¿½Ö§ï¿½ï¿½Ï¸");
+            System.out.println("                   2 ï¿½Ç¼ï¿½ï¿½ï¿½ï¿½ï¿½");
+            System.out.println("                   3 ï¿½Ç¼ï¿½Ö§ï¿½ï¿½");
+            System.out.println("                   4 ï¿½ï¿½    ï¿½ï¿½\n");
+            System.out.print("                   ï¿½ï¿½Ñ¡ï¿½ï¿½(1-4)ï¿½ï¿½");
             
             char key = Utility.readMenuSelection();
             System.out.println();
             switch (key) {
                 case '1':
-                    System.out.println("-----------------µ±Ç°ÊÕÖ§Ã÷Ï¸¼ÇÂ¼-----------------");
+                    System.out.println("-----------------ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ï¿½Ï¸ï¿½ï¿½Â¼-----------------");
                     System.out.println(details);
                     System.out.println("--------------------------------------------------");
                     break;
                 case '2':
-                    System.out.print("±¾´ÎÊÕÈë½ð¶î£º");
+                    System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£º");
                     int amount1 = Utility.readNumber();
-                    System.out.print("±¾´ÎÊÕÈëËµÃ÷£º");
+                    System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½");
                     String desc1 = Utility.readString();
 
                     balance += amount1;
-                    details += "ÊÕÈë\t" + balance + "\t\t" +
+                    details += "ï¿½ï¿½ï¿½ï¿½\t" + balance + "\t\t" +
                                amount1 + "\t\t" + desc1 + "\n";
-                    System.out.println("---------------------µÇ¼ÇÍê³É---------------------");
+                    System.out.println("---------------------ï¿½Ç¼ï¿½ï¿½ï¿½ï¿½---------------------");
                     break;
                 case '3':
-                    System.out.print("±¾´ÎÖ§³ö½ð¶î£º");
+                    System.out.print("ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½î£º");
                     int amount2 = Utility.readNumber();
-                    System.out.print("±¾´ÎÖ§³öËµÃ÷£º");
+                    System.out.print("ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½");
                     String desc2 = Utility.readString();
 
                     balance -= amount2;
-                    details += "Ö§³ö\t" + balance + "\t\t" +
+                    details += "Ö§ï¿½ï¿½\t" + balance + "\t\t" +
                                amount2 + "\t\t" + desc2 + "\n";
-                    System.out.println("---------------------µÇ¼ÇÍê³É---------------------");
+                    System.out.println("---------------------ï¿½Ç¼ï¿½ï¿½ï¿½ï¿½---------------------");
                     break;
                 case '4':
-                    System.out.print("È·ÈÏÊÇ·ñÍË³ö(Y/N)£º");
+                    System.out.print("È·ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ë³ï¿½(Y/N)ï¿½ï¿½");
                     char yn = Utility.readConfirmSelection();
                     if (yn == 'Y') loopFlag = false;
                     break;
